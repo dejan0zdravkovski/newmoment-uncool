@@ -1,17 +1,110 @@
+@font-face {
+    font-family: 'TuborgGrotesque-Bold';
+    src: url('/fonts/TuborgGrotesque-Bold.otf') format('truetype');
+}
+
+@font-face {
+    font-family: 'TuborgGrotesque-Regular';
+    src: url('/fonts/TuborgGrotesque-Regular.otf') format('truetype');
+}
+
 body {
-    font-family: Arial, sans-serif;
+    font-family: TuborgGrotesque-Bold, TuborgGrotesque-Regular !important;
     margin: 0;
     padding: 0;
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
-    background-color: #f0f0f0;
+    background: linear-gradient(180deg, #000000, #8BC53F) !important;
+}
+
+body, html {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+#container {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+#content {
+    flex: 1 0 auto; /* Allow the content to grow and take available space */
+    margin-top: 0; /* Ensure no margin at the top */
+}
+
+.loading {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+
+.loading-image {
+    height: auto; /* Maintain aspect ratio */
+    margin-bottom: 10px; /* Add some space below the image */
+}
+
+.header {
+    display: flex;
+    background-color: black;
+}
+
+.header img {
+    max-width: 348px;
+}
+
+.people {
+    display: flex;
+    background-color: #8BC53F;
+    color: white !important;
+    padding: 30px;
+    max-height: 450px;
+    overflow-y: auto;
 }
 
 .container {
-    background-color: white;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.friend-input {
+    text-align: center;
+    background-color: #8BC53F !important;
+    color: white !important;
+}
+
+.friend-input::placeholder {
+    color: white !important;
+}
+
+.with-margin {
+    margin-top: 20px !important;
+}
+
+.uncool-friend-add-btn {
+    background-color: black !important;
+    border: 0 !important;
+    color: #8BC53F !important;
+}
+
+.uncool-friend-pick-btn {
+    background-color: #D8EBBE !important;
+    border: 0 !important;
+    color: black !important;
+    text-transform: uppercase;
+}
+
+.row.fixed-bottom {
+    flex-shrink: 0; /* Prevent the footer from shrinking */
+}
+
+.footer-logo {
+    width: 50px; /* Adjust the width as needed */
+    height: auto; /* Maintain aspect ratio */
+    margin-top: 15px; /* Add some space above the image */
+    margin-bottom: 15px; /* Add some space below the image */
 }
