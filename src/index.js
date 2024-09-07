@@ -1,15 +1,8 @@
+import 'bootstrap/dist/css/bootstrap.min.css';
 import React from 'react';
 import { createRoot } from 'react-dom/client';
+import App from './App';
 
-function App() {
-    return (
-        <div className="container">
-            <h1>Hello, World!</h1>
-            <p>This is a simple web app based on mockups.</p>
-        </div>
-    );
-}
-
-const container = document.getElementById('root');
+const container = document.getElementById('content');
 const root = createRoot(container);
 root.render(<App />);
