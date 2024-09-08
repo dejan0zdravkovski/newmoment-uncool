@@ -58,7 +58,7 @@ body, html {
     max-width: 348px;
 }
 
-.people {
+.people, .uncool {
     display: flex;
     background-color: #8BC53F;
     color: white !important;
@@ -96,6 +96,28 @@ body, html {
     border: 0 !important;
     color: black !important;
     text-transform: uppercase;
+}
+
+.uncool-friend-heading {
+    color: black !important;
+    appearance: uppercase;
+    font-weight: bold;
+}
+
+.angel-friend {
+    background-color: white;
+    color: #8BC53F;
+    font-weight: bold;
+    width: 150px; /* Adjust the width as needed */
+    height: 150px; /* Ensure the height is equal to the width */
+    border-radius: 50%; /* Make the div a circle */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #f8f9fa; /* Background color for visibility */
+    margin: 0 auto; /* Center the circle horizontally */
+    font-size: 1.5rem; /* Adjust the font size as needed */
+    text-align: center; /* Center the text */
 }
 
 .row.fixed-bottom {
