@@ -69,7 +69,7 @@ function App() {
     if (loading) {
         return (
             <div className="loading">
-                <img src={process.env.PUBLIC_URL + '/loading.png'} alt="Loading" className="loading-image" />
+                <img src={process.env.PUBLIC_URL + '/images/loading.png'} alt="Loading" className="loading-image" />
             </div>
         );
     }
@@ -78,7 +78,7 @@ function App() {
         <div className="col-12">
             <div className="row header text-center">
                 <div className="col-12">
-                    <img src={process.env.PUBLIC_URL + '/header.png'} alt="Header" />
+                    <img src={process.env.PUBLIC_URL + '/images/header.png'} alt="Header" />
                 </div>
             </div>
             {showFriendsInput && (
