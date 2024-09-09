@@ -49,7 +49,8 @@ body, html {
 .header {
     display: flex;
     background-color: #2B2E34;
-    padding: 1rem;
+    padding-top: 1.5rem;
+    padding-bottom: 1rem;
 }
 
 .header img {
@@ -69,7 +70,8 @@ body, html {
     background-position: center;
     background-color: transparent;
     background-size: 100% auto;
-    height: 470px;
+    background-position: top;
+    background-color: #2B2E34;
 }
 
 .container {
