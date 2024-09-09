@@ -1,15 +1,10 @@
 @font-face {
-    font-family: 'TuborgGrotesque-Bold';
-    src: url('./fonts/TuborgGrotesque-Bold.otf') format('truetype');
-}
-
-@font-face {
     font-family: 'TuborgGrotesque-Regular';
     src: url('./fonts/TuborgGrotesque-Regular.otf') format('truetype');
 }
 
 body {
-    font-family: TuborgGrotesque-Bold, TuborgGrotesque-Regular !important;
+    font-family: TuborgGrotesque-Regular !important;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -26,6 +21,7 @@ body, html {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
+    max-width: 372px;
 }
 
 #content {
@@ -33,36 +29,27 @@ body, html {
 }
 
 .loading {
-    display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     color: white;
     height: auto; /* Maintain aspect ratio */
-    margin-top: 55%;
-}
-
-.loading-image {
-    margin-bottom: 10px; /* Add some space below the image */
+    margin-top: 51%;
 }
 
 .header {
     position: sticky;
     top: 0;
     background-color: #2B2E34;
-    padding: 1rem;
-}
-
-.header img {
-    max-width: 348px;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
 }
 
 .people, .uncool, .angel, .prize {
-    display: flex;
     background-color: #8BC53F;
     color: white !important;
-    padding: 30px;
-    height: auto; /* Maintain aspect ratio */
+    padding: 2rem;
+    height: auto; /*Maintain aspect ratio*/
 }
 
 .prize {
@@ -88,12 +75,12 @@ body, html {
     background-color: #8BC53F !important;
     color: white !important;
     border-color: #2B2E34 !important;
-    margin: 3px;
+    margin: 0.5rem;
 }
 
 .email-input {
-    margin-top: 80px;
-    margin-bottom: 80px;
+    margin-top: 4rem;
+    margin-bottom: 4rem;
 }
 
 .friend-input::placeholder {
@@ -101,7 +88,7 @@ body, html {
 }
 
 .with-margin {
-    margin-top: 20px !important;
+    margin-top: 1rem !important;
 }
 
 .uncool-friend-add-btn {
@@ -115,6 +102,10 @@ body, html {
     border: 0 !important;
     color: black !important;
     text-transform: uppercase;
+}
+
+.get-prize-btn {
+    font-size: 0.9rem !important;
 }
 
 .uncool-friend-heading {
@@ -137,7 +128,6 @@ body, html {
 .angel-friend-heading-3 {
     color: #474746 !important;
     font-size: 1rem;
-    font-family: 'TuborgGrotesque-Regular';
 }
 
 .angel-friend-heading-4 {
@@ -148,14 +138,13 @@ body, html {
 
 .angel-friend-heading-5 {
     color: #D8EBBE !important;
-    font-size: 1rem;
+    font-size: 0.9rem;
     font-weight: normal !important;
     text-transform: uppercase;
-    font-family: 'TuborgGrotesque-Regular';
 }
 
 .send-email-heading {
-    margin-top: 30px !important;
+    margin-top: 2rem !important;
 }
 
 .angel-friend {
@@ -178,7 +167,7 @@ body, html {
 .footer {
     flex-shrink: 0; /* Prevent the footer from shrinking */
     text-align: center;
-    margin-bottom: 1.5rem;
+    padding-bottom: 1.5rem;
 }
 
 .footer-logo {
