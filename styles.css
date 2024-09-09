@@ -51,6 +51,7 @@ body, html {
     background-color: #2B2E34;
     padding-top: 1.5rem;
     padding-bottom: 1rem;
+    min-height: 201px;
 }
 
 .header img {
