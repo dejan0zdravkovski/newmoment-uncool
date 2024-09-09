@@ -10,12 +10,9 @@
 
 body {
     font-family: TuborgGrotesque-Bold, TuborgGrotesque-Regular !important;
-    margin: 0;
-    padding: 0;
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
     background: linear-gradient(180deg, #000000, #8BC53F) !important;
 }
 
@@ -28,12 +25,11 @@ body, html {
 #container {
     display: flex;
     flex-direction: column;
-    height: 100%;
+    min-height: 100vh;
 }
 
 #content {
     flex: 1 0 auto; /* Allow the content to grow and take available space */
-    margin-top: 0; /* Ensure no margin at the top */
 }
 
 .loading {
@@ -42,16 +38,18 @@ body, html {
     justify-content: center;
     align-items: center;
     color: white;
+    height: auto; /* Maintain aspect ratio */
+    margin-top: 55%;
 }
 
 .loading-image {
-    height: auto; /* Maintain aspect ratio */
     margin-bottom: 10px; /* Add some space below the image */
 }
 
 .header {
     display: flex;
     background-color: #2B2E34;
+    padding: 1rem;
 }
 
 .header img {
@@ -63,8 +61,6 @@ body, html {
     background-color: #8BC53F;
     color: white !important;
     padding: 30px;
-    max-height: 600px;
-    overflow-y: auto;
 }
 
 .prize {
@@ -73,7 +69,7 @@ body, html {
     background-position: center;
     background-color: transparent;
     background-size: 100% auto;
-    height: 486px;
+    height: 470px;
 }
 
 .container {
@@ -111,7 +107,7 @@ body, html {
     color: #8BC53F !important;
 }
 
-.uncool-friend-pick-btn, .get-prize-btn, .stay-btn, .send-btn {
+.uncool-friend-pick-btn, .get-prize-btn, .send-btn {
     background-color: #D8EBBE !important;
     border: 0 !important;
     color: black !important;
@@ -126,31 +122,33 @@ body, html {
 
 .angel-friend-heading-1 {
     color: #474746 !important;
-    font-size: 2rem;
+    font-size: 1.5rem;
 }
 
 .angel-friend-heading-2 {
     color: white !important;
-    font-size: 4rem;
+    font-size: 2.5rem;
     font-weight: bold;
 }
 
 .angel-friend-heading-3 {
     color: #474746 !important;
     font-size: 1rem;
+    font-family: 'TuborgGrotesque-Regular';
 }
 
 .angel-friend-heading-4 {
     color: white !important;
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     font-weight: bold;
 }
 
 .angel-friend-heading-5 {
     color: #D8EBBE !important;
     font-size: 1rem;
-    font-weight: bold;
+    font-weight: normal !important;
     text-transform: uppercase;
+    font-family: 'TuborgGrotesque-Regular';
 }
 
 .send-email-heading {
@@ -174,13 +172,12 @@ body, html {
     text-transform: uppercase; /* Uppercase the text */   
 }
 
-.row.fixed-bottom {
+.footer {
     flex-shrink: 0; /* Prevent the footer from shrinking */
+    text-align: center;
+    margin-bottom: 1.5rem;
 }
 
 .footer-logo {
-    width: 50px; /* Adjust the width as needed */
-    height: auto; /* Maintain aspect ratio */
-    margin-top: 15px; /* Add some space above the image */
-    margin-bottom: 15px; /* Add some space below the image */
+    max-width: 50px; /* Adjust the width as needed */
 }

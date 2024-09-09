@@ -36,23 +36,24 @@ function App() {
         if (nonEmptyFriends.length > 0) {
             setShowFriendsInput(false); // Hide the friends input div
             setUncoolFriend(true); // Show the uncool friend div
-            loopRandomFriend(nonEmptyFriends.length * 10, nonEmptyFriends);
+            loopRandomFriend(nonEmptyFriends.length * 10, nonEmptyFriends, 10);
         }
     };
 
-    function loopRandomFriend(counter, nonEmptyFriends) {
+    function loopRandomFriend(counter, nonEmptyFriends, timeout) {
         if (counter === 0) {
             setUncoolFriend(false); // Hide the uncool friend div
             setAngelFriend(true); // Show the angel friend div
             return;
         }
         const randomIndex = Math.floor(Math.random() * nonEmptyFriends.length);
-        /* set timeout to show the random friend after 0.5 seconds */
+        /* set timeout to show the random friend starting at 100 ms and increasing by 10 */
         setRandomFriend(nonEmptyFriends[randomIndex]);
         setTimeout(() => {
             counter--;
-            loopRandomFriend(counter, nonEmptyFriends);
-        }, 500);
+            timeout += 5;
+            loopRandomFriend(counter, nonEmptyFriends, timeout);
+        }, timeout);
     }
 
     const getPrize = () => {
@@ -167,7 +168,7 @@ function App() {
                     <div className="col-12">
                         <div className="row">
                             <div className="col-12 angel-friend-heading-1">
-                                <p className="with-margin">Congratulations</p>
+                                <p className="no-margin">Congratulations</p>
                             </div>
                         </div>
                         <div className="row">
@@ -177,17 +178,17 @@ function App() {
                         </div>
                         <div className="row">
                             <div className="col-12 angel-friend-heading-3">
-                                <p className="no-margin">THE</p>
+                                <p className="no-margin">is yours group's</p>
                             </div>
                         </div>
                         <div className="row">
                             <div className="col-12 angel-friend-heading-4">
-                                <p className="no-margin">UNCOOLFRIEND</p>
+                                <p className="no-margin">#UncoolFriend</p>
                             </div>
                         </div>
                         <div className="row">
                             <div className="col-12 angel-friend-heading-3">
-                                <p className="no-margin">FOR TONIGHT!</p>
+                                <p className="no-margin">your guardian angel for tonight!</p>
                             </div>
                         </div>
                         <div className="row">
@@ -195,7 +196,19 @@ function App() {
                                 <p className="with-margin">Drive safe, do not drink and drive,<br />and don't try to impress anyone<br />with dangerous driving</p>
                             </div>
                         </div>
-                        <div className="row with-margin">
+                        <div className="row no-margin">
+                            <div className="col-6">
+                                <p className="stay-btn w-100">
+                                    #StayUncool
+                                </p>
+                            </div>
+                            <div className="col-6">
+                                <p className="stay-btn w-100">
+                                    #StaySafe
+                                </p>
+                            </div>
+                        </div>
+                        <div className="row no-margin">
                             <div className="col-12">
                                 <button 
                                     id="get-prize" 
@@ -203,18 +216,6 @@ function App() {
                                     onClick={getPrize}
                                 >
                                     Get your free #Uncool gift
-                                </button>
-                            </div>
-                        </div>
-                        <div className="row with-margin">
-                            <div className="col-6">
-                                <button className="btn btn-primary stay-btn w-100">
-                                    #StayUncool
-                                </button>
-                            </div>
-                            <div className="col-6">
-                                <button className="btn btn-primary stay-btn w-100">
-                                    #StaySafe
                                 </button>
                             </div>
                         </div>
@@ -226,7 +227,7 @@ function App() {
                     <div className="col-12">
                         <div className="row">
                             <div className="col-12 send-email-heading">
-                                <p>Send your email address to receive<br />a hoodie created by ZeroNero<br />of their new #Uncool Collection</p>
+                                <p>Send your email address to receive<br />a t-shirt created by the fashion brand<br />Zero Nero from their new #Uncool Collection</p>
                             </div>
                         </div>
                         <div className="row">
