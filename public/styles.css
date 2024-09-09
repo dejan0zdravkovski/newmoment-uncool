@@ -20,7 +20,7 @@ body, html {
 #container {
     display: flex;
     flex-direction: column;
-    min-height: 100vh;
+    height: 100vh;
     max-width: 360px;
 }
 
@@ -33,23 +33,24 @@ body, html {
     justify-content: center;
     align-items: center;
     color: white;
-    height: auto; /* Maintain aspect ratio */
     margin-top: 51%;
 }
 
 .header {
-    position: sticky;
-    top: 0;
+    position: sticky; /* Make the header stick to the top */
+    top: 0; /* Stick to the top of the viewport */
     background-color: #2B2E34;
     padding-top: 1rem;
     padding-bottom: 1rem;
 }
 
 .people, .uncool, .angel, .prize {
+    display: flex;
+    flex-direction: column;
     background-color: #8BC53F;
     color: white !important;
     padding: 2rem;
-    height: auto; /*Maintain aspect ratio*/
+    height: auto; /* Maintain aspect ratio */
 }
 
 .prize {
