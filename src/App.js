@@ -62,11 +62,28 @@ function App() {
     }
 
     const sendEmailAddress = () => {
-        //send it to Azure Function
+        let email = document.getElementById('email-value').value;
+        let azureFunctionUrl = 'https://newmoment-buildcustomersdatabase-test.azurewebsites.net/api/CollectEmailsIsolated?code=GK9maLTw7qnyV23U1PIvWPfRbuAzVuxylH34iDhRNd5-AzFu2Ri7JQ%3D%3D'; // Replace with your Azure Function URL
+        let body = JSON.stringify({ email: email });
 
-        window.location.reload(false);
+        fetch(azureFunctionUrl, {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: body,
+            mode: 'no-cors' // Set the mode to 'no-cors'
+        })
+        .then(response => {
+            console.log(response);
+            window.location.reload(false);
+        })
+        .catch((error) => {
+            console.error(error);
+            window.location.reload(false);
+        });
     }
-
+    
     if (loading) {
         return (
             <div className="loading">
@@ -232,7 +249,7 @@ function App() {
                         </div>
                         <div className="row">
                             <div className="col-12" id="uncool-friend-div">
-                                <input type="text" placeholder="name@emailaddress.com" className="form-control email-input" />
+                                <input type="email" id="email-value" placeholder="name@emailaddress.com" className="form-control email-input" />
                             </div>
                         </div>
                         <div className="row with-margin">
