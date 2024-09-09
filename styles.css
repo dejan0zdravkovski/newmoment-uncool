@@ -21,7 +21,7 @@ body, html {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
-    max-width: 372px;
+    max-width: 360px;
 }
 
 #content {
@@ -167,7 +167,7 @@ body, html {
 .footer {
     flex-shrink: 0; /* Prevent the footer from shrinking */
     text-align: center;
-    padding-bottom: 1.5rem;
+    padding-bottom: 1rem;
 }
 
 .footer-logo {
