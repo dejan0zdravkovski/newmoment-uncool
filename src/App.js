@@ -70,7 +70,7 @@ function App() {
     if (loading) {
         return (
             <div className="loading">
-                <img src={process.env.PUBLIC_URL + '/images/loading.png'} alt="Loading" className="loading-image" />
+                <img src={process.env.PUBLIC_URL + '/images/loading.png'} alt="Loading" />
             </div>
         );
     }
