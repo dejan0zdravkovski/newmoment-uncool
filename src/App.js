@@ -30,6 +30,7 @@ function App() {
     const [showUncoolFriend, setUncoolFriend] = useState(true);
     const [showAngelFriend, setAngelFriend] = useState(true);
     const [showPrize, setPrize] = useState(true);
+    const [isSending, setIsSending] = useState(false);
 
     const pickRandomFriend = () => {
         const nonEmptyFriends = friends.filter(friend => friend.trim() !== '');
@@ -66,6 +67,8 @@ function App() {
         let azureFunctionUrl = 'https://newmoment-buildcustomersdatabase-test.azurewebsites.net/api/CollectEmailsIsolated?code=GK9maLTw7qnyV23U1PIvWPfRbuAzVuxylH34iDhRNd5-AzFu2Ri7JQ%3D%3D'; // Replace with your Azure Function URL
         let body = JSON.stringify({ email: email });
 
+        setIsSending(true); // Disable the button while sending the email address
+
         fetch(azureFunctionUrl, {
             method: 'POST',
             headers: {
@@ -93,7 +96,7 @@ function App() {
     }
 
     return (
-        <div className="col-12">
+        <div>
             <div className="row header text-center">
                 <div className="col-12">
                     <img src={process.env.PUBLIC_URL + '/images/header.png'} alt="Header" />
@@ -258,8 +261,13 @@ function App() {
                                     id="send" 
                                     className="btn btn-primary send-btn"
                                     onClick={sendEmailAddress}
+                                    disabled={isSending}
                                 >
-                                    SEND
+                                    {isSending ? (
+                                        <span class="spinner-grow spinner-grow-sm" role="status" aria-hidden="true"></span>
+                                    ) : (
+                                        'SEND'
+                                    )}
                                 </button>
                             </div>
                         </div>
