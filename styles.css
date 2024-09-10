@@ -21,6 +21,7 @@ body, html {
     display: flex;
     flex-direction: column;
     height: 100vh;
+    max-width: 360px;
 }
 
 #content {
@@ -37,6 +38,7 @@ body, html {
 
 .header {
     display: flex;
+    flex-direction: column;
     background-color: #2B2E34;
     padding-top: 1rem;
     padding-bottom: 1rem;
