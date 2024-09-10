@@ -1,13 +1,13 @@
 {
   "files": {
     "main.css": "/newmoment-uncool/static/css/main.d221dc40.css",
-    "main.js": "/newmoment-uncool/static/js/main.f72ed2ce.js",
+    "main.js": "/newmoment-uncool/static/js/main.2fe6884a.js",
     "index.html": "/newmoment-uncool/index.html",
     "main.d221dc40.css.map": "/newmoment-uncool/static/css/main.d221dc40.css.map",
-    "main.f72ed2ce.js.map": "/newmoment-uncool/static/js/main.f72ed2ce.js.map"
+    "main.2fe6884a.js.map": "/newmoment-uncool/static/js/main.2fe6884a.js.map"
   },
   "entrypoints": [
     "static/css/main.d221dc40.css",
-    "static/js/main.f72ed2ce.js"
+    "static/js/main.2fe6884a.js"
   ]
 }
