@@ -108,7 +108,7 @@ function App() {
                         <div className="row">
                             <div className="col-1">&nbsp;</div>
                             <div className="col-10">
-                                <p>Input the names of everyone of<br />the group going out tonight</p>
+                                <p>Vendosni emrat e secilit nga grupi tuaj që do të dalë sonte</p>
                             </div>
                             <div className="col-1">&nbsp;</div>
                         </div>
@@ -119,7 +119,7 @@ function App() {
                                     <input
                                         key={index}
                                         type="text"
-                                        placeholder={`Friend #${index + 1}`}
+                                        placeholder={`Shoku #${index + 1}`}
                                         className="form-control friend-input"
                                         value={friend}
                                         onChange={(event) => handleFriendChange(index, event)}
@@ -135,7 +135,7 @@ function App() {
                                     id="add-uncool-friend" 
                                     className="btn btn-primary uncool-friend-add-btn"
                                     onClick={addFriendInput}>
-                                        + Add friend
+                                        + Shto shok
                                 </button>
                             </div>
                             <div className="col-1">&nbsp;</div>
@@ -147,7 +147,7 @@ function App() {
                                     className="btn btn-primary uncool-friend-pick-btn w-100"
                                     onClick={pickRandomFriend}
                                 >
-                                    Done
+                                    Përfundo
                                 </button>
                             </div>
                         </div>
@@ -160,14 +160,14 @@ function App() {
                         <div className="row">
                             <div className="col-1">&nbsp;</div>
                             <div className="col-10 uncool-friend-heading">
-                                <p>CHOOSING <br />THE UNCOOL FRIEND</p>
+                                <p>Duke perzgjedhur UncoolFriend</p>
                             </div>
                             <div className="col-1">&nbsp;</div>
                         </div>
                         <div className="row">
                             <div className="col-1">&nbsp;</div>
                             <div className="col-10">
-                                <p>the designated guardian angel<br />for the whole group tonight:</p>
+                                <p>Engjëlli mbrojtës i caktuar për të gjithë grupin sonte:</p>
                             </div>
                             <div className="col-1">&nbsp;</div>
                         </div>
@@ -188,7 +188,7 @@ function App() {
                     <div className="col-12">
                         <div className="row">
                             <div className="col-12 angel-friend-heading-1">
-                                <p className="no-margin">Congratulations</p>
+                                <p className="no-margin">URIME</p>
                             </div>
                         </div>
                         <div className="row">
@@ -198,7 +198,7 @@ function App() {
                         </div>
                         <div className="row">
                             <div className="col-12 angel-friend-heading-3">
-                                <p className="no-margin">is yours group's</p>
+                                <p className="no-margin">është</p>
                             </div>
                         </div>
                         <div className="row">
@@ -208,12 +208,12 @@ function App() {
                         </div>
                         <div className="row">
                             <div className="col-12 angel-friend-heading-3">
-                                <p className="no-margin">your guardian angel for tonight!</p>
+                                <p className="no-margin">dhe engjëlli juaj mbrojtës për sonte!</p>
                             </div>
                         </div>
                         <div className="row">
                             <div className="col-12 angel-friend-heading-5">
-                                <p className="with-margin">Drive safe, do not drink and drive,<br />and don't try to impress anyone<br />with dangerous driving</p>
+                                <p className="with-margin">Udhëtoni me kujdes, vendosni rripin e sigurimit dhe mos i jepni makinës me shpejtësi te lartë.<br />Mos u perpiqni të bini në sy duke rrezikuar veten dhe të tjerët.</p>
                             </div>
                         </div>
                         <div className="row no-margin">
@@ -235,7 +235,7 @@ function App() {
                                     className="btn btn-primary get-prize-btn w-100"
                                     onClick={getPrize}
                                 >
-                                    Get your free #Uncool gift
+                                    Merrni dhuratën tuaj #Uncool falas
                                 </button>
                             </div>
                         </div>
@@ -247,7 +247,8 @@ function App() {
                     <div className="col-12">
                         <div className="row">
                             <div className="col-12 send-email-heading">
-                                <p>Send your email address to receive<br />a t-shirt created by the fashion brand<br />Zero Nero from their new #Uncool Collection</p>
+                                <p>Vendos adresen e email-it për të tërhequr dhuratën t-shirt nga koleksioni i ri #Uncool prodhuar nga marka Zero Nero.
+</p>
                             </div>
                         </div>
                         <div className="row">
@@ -266,7 +267,7 @@ function App() {
                                     {isSending ? (
                                         <span class="spinner-grow spinner-grow-sm" role="status" aria-hidden="true"></span>
                                     ) : (
-                                        'SEND'
+                                        'Dërgo'
                                     )}
                                 </button>
                             </div>
