@@ -90,7 +90,7 @@ function App() {
     if (loading) {
         return (
             <div className="loading">
-                <img src={process.env.PUBLIC_URL + '/images/loading.png'} alt="Loading" />
+                <img src={process.env.PUBLIC_URL + '/images/loading.webp'} alt="Loading" />
             </div>
         );
     }
@@ -99,7 +99,7 @@ function App() {
         <div>
             <div className="row header text-center">
                 <div className="col-12">
-                    <img src={process.env.PUBLIC_URL + '/images/header.png'} alt="Header" />
+                    <img src={process.env.PUBLIC_URL + '/images/header.webp'} alt="Header" />
                 </div>
             </div>
             {showFriendsInput && (
