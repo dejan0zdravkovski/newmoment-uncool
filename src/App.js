@@ -247,8 +247,7 @@ function App() {
                     <div className="col-12">
                         <div className="row">
                             <div className="col-12 send-email-heading">
-                                <p>Vendos adresen e email-it për të tërhequr dhuratën t-shirt nga koleksioni i ri #Uncool prodhuar nga marka Zero Nero.
-</p>
+                                <p>Vendos adresen e email-it për të tërhequr dhuratën t-shirt nga koleksioni i ri #Uncool prodhuar nga marka Zero Nero.</p>
                             </div>
                         </div>
                         <div className="row">
