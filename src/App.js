@@ -213,7 +213,7 @@ function App() {
                         </div>
                         <div className="row">
                             <div className="col-12 angel-friend-heading-5">
-                                <p className="with-margin">Udhëtoni me kujdes, vendosni rripin e sigurimit dhe mos i jepni makinës me shpejtësi te lartë.<br />Mos u perpiqni të bini në sy duke rrezikuar veten dhe të tjerët.</p>
+                                <p className="with-margin">Udhëtoni me kujdes, mos i jepni makinës nëse keni konsumuar alkool.<br />Mos u perpiqni të bini në sy duke rrezikuar veten dhe të tjerët.</p>
                             </div>
                         </div>
                         <div className="row no-margin">
