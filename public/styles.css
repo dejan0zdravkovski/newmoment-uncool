@@ -43,6 +43,10 @@ body, html {
     padding-bottom: 1rem;
 }
 
+.loading img, .header img {
+    width: 336px;
+}
+
 .people, .uncool, .angel, .prize {
     display: flex;
     flex-direction: column;
@@ -171,6 +175,10 @@ body, html {
     padding-bottom: 0.8rem;
 }
 
+.footer img {
+    width: 50px;
+}
+
 .footer-logo {
-    max-width: 50px; /* Adjust the width as needed */
+    max-width: 50px;
 }
