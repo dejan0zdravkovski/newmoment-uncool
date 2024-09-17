@@ -47,7 +47,7 @@ body, html {
     width: 336px;
 }
 
-.people, .uncool, .angel, .prize {
+.people, .uncool, .angel, .prize, .thankyou {
     display: flex;
     flex-direction: column;
     background-color: #8BC53F;
@@ -95,13 +95,18 @@ body, html {
     margin-top: 1rem !important;
 }
 
+.with-margin-large {
+    margin-top: 4rem !important;
+    margin-bottom: 4rem !important;
+}
+
 .uncool-friend-add-btn {
     background-color: #2B2E34 !important;
     border: 0 !important;
     color: #8BC53F !important;
 }
 
-.uncool-friend-pick-btn, .get-prize-btn, .send-btn {
+.uncool-friend-pick-btn, .get-prize-btn, .send-btn, .play-again-btn {
     background-color: #D8EBBE !important;
     border: 0 !important;
     color: black !important;
@@ -166,6 +171,13 @@ body, html {
     font-size: 1.5rem; /* Adjust the font size as needed */
     text-align: center; /* Center the text */
     text-transform: uppercase; /* Uppercase the text */   
+}
+
+.thankyou-heading {
+    color: white !important;
+    font-size: 2rem;
+    text-transform: uppercase;
+    font-weight: bold;
 }
 
 .footer {
