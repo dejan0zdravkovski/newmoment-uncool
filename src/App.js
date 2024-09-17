@@ -31,6 +31,7 @@ function App() {
     const [showAngelFriend, setAngelFriend] = useState(true);
     const [showPrize, setPrize] = useState(true);
     const [isSending, setIsSending] = useState(false);
+    const [showThankYou, setShowThankYou] = useState(false);
 
     const pickRandomFriend = () => {
         const nonEmptyFriends = friends.filter(friend => friend.trim() !== '');
@@ -79,12 +80,18 @@ function App() {
         })
         .then(response => {
             console.log(response);
-            window.location.reload(false);
+            setPrize(false);
+            setShowThankYou(true);
         })
         .catch((error) => {
             console.error(error);
-            window.location.reload(false);
+            setPrize(false);
+            setShowThankYou(true);
         });
+    }
+
+    const playAgain = () => {
+        window.location.reload(false);
     }
     
     if (loading) {
@@ -270,6 +277,31 @@ function App() {
                                     )}
                                 </button>
                             </div>
+                        </div>
+                    </div>
+                </div>
+            )}
+            {showThankYou && (
+                <div className="row thankyou rounded-top text-center">
+                    <div className="col-12">
+                        <div className="row">
+                            <div className="col-12 thankyou-heading">
+                                <p className="with-margin-large">faleminderit!</p>
+                            </div>
+                        </div>
+                        
+                        <div className="row no-margin">
+                            <div className="col-2">&nbsp;</div>
+                            <div className="col-8">
+                                <button 
+                                    id="play-again" 
+                                    className="btn btn-primary play-again-btn w-100"
+                                    onClick={playAgain}
+                                >
+                                    Luaj përsëri
+                                </button>
+                            </div>
+                            <div className="col-2">&nbsp;</div>
                         </div>
                     </div>
                 </div>
