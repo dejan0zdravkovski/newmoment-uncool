@@ -1,7 +1,16 @@
 import React, { useEffect, useState } from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import { useTranslation } from 'react-i18next';
+import { useParams } from 'react-router-dom';
+import './i18n'; // Import the i18n configuration
 
-function App() {
+function Game() {
+    const { t, i18n } = useTranslation();
+    const { lang = 'al' } = useParams();
+    useEffect(() => {
+        i18n.changeLanguage(lang);
+    }, [lang, i18n]);
+
     const [loading, setLoading] = useState(true);
 
     useEffect(() => {
@@ -97,7 +106,7 @@ function App() {
     if (loading) {
         return (
             <div className="loading">
-                <img src={process.env.PUBLIC_URL + '/images/loading.svg'} alt="Loading" />
+            <img src={`${process.env.PUBLIC_URL}/images/loading-${lang}.svg`} alt="Loading" />
             </div>
         );
     }
@@ -106,7 +115,7 @@ function App() {
         <div>
             <div className="row header text-center">
                 <div className="col-12">
-                    <img src={process.env.PUBLIC_URL + '/images/header.svg'} alt="Header" />
+                    <img src={`${process.env.PUBLIC_URL}/images/header-${lang}.svg`} alt="Header" />
                 </div>
             </div>
             {showFriendsInput && (
@@ -115,7 +124,7 @@ function App() {
                         <div className="row">
                             <div className="col-1">&nbsp;</div>
                             <div className="col-10">
-                                <p>Vendosni emrat e secilit nga grupi tuaj që do të dalë sonte</p>
+                                <p>{t('inputNames')}</p>
                             </div>
                             <div className="col-1">&nbsp;</div>
                         </div>
@@ -126,7 +135,7 @@ function App() {
                                     <input
                                         key={index}
                                         type="text"
-                                        placeholder={`Shoku #${index + 1}`}
+                                        placeholder={`${t('friend')} #${index + 1}`}
                                         className="form-control friend-input"
                                         value={friend}
                                         onChange={(event) => handleFriendChange(index, event)}
@@ -142,7 +151,7 @@ function App() {
                                     id="add-uncool-friend" 
                                     className="btn btn-primary uncool-friend-add-btn"
                                     onClick={addFriendInput}>
-                                        + Shto shok
+                                        + {t('addFriend')}
                                 </button>
                             </div>
                             <div className="col-1">&nbsp;</div>
@@ -154,7 +163,7 @@ function App() {
                                     className="btn btn-primary uncool-friend-pick-btn w-100"
                                     onClick={pickRandomFriend}
                                 >
-                                    Përfundo
+                                    {t('done')}
                                 </button>
                             </div>
                         </div>
@@ -167,14 +176,14 @@ function App() {
                         <div className="row">
                             <div className="col-1">&nbsp;</div>
                             <div className="col-10 uncool-friend-heading">
-                                <p>Duke perzgjedhur UncoolFriend</p>
+                                <p>{t('choosing')}</p>
                             </div>
                             <div className="col-1">&nbsp;</div>
                         </div>
                         <div className="row">
                             <div className="col-1">&nbsp;</div>
                             <div className="col-10">
-                                <p>Engjëlli mbrojtës i caktuar për të gjithë grupin sonte:</p>
+                                <p>{t('angel')}</p>
                             </div>
                             <div className="col-1">&nbsp;</div>
                         </div>
@@ -195,7 +204,7 @@ function App() {
                     <div className="col-12">
                         <div className="row">
                             <div className="col-12 angel-friend-heading-1">
-                                <p className="no-margin">URIME</p>
+                                <p className="no-margin">{t('congrats')}</p>
                             </div>
                         </div>
                         <div className="row">
@@ -205,7 +214,7 @@ function App() {
                         </div>
                         <div className="row">
                             <div className="col-12 angel-friend-heading-3">
-                                <p className="no-margin">është</p>
+                                <p className="no-margin">{t('the')}</p>
                             </div>
                         </div>
                         <div className="row">
@@ -215,12 +224,12 @@ function App() {
                         </div>
                         <div className="row">
                             <div className="col-12 angel-friend-heading-3">
-                                <p className="no-margin">dhe engjëlli juaj mbrojtës për sonte!</p>
+                                <p className="no-margin">{t('tonight')}</p>
                             </div>
                         </div>
                         <div className="row">
                             <div className="col-12 angel-friend-heading-5">
-                                <p className="with-margin">Udhëtoni me kujdes, mos i jepni makinës nëse keni konsumuar alkool.<br />Mos u perpiqni të bini në sy duke rrezikuar veten dhe të tjerët.</p>
+                                <p className="with-margin">{t('drive-safe')}</p>
                             </div>
                         </div>
                         <div className="row no-margin">
@@ -242,7 +251,7 @@ function App() {
                                     className="btn btn-primary get-prize-btn w-100"
                                     onClick={getPrize}
                                 >
-                                    Merrni dhuratën tuaj #Uncool falas
+                                    {t('prize')}
                                 </button>
                             </div>
                         </div>
@@ -254,7 +263,7 @@ function App() {
                     <div className="col-12">
                         <div className="row">
                             <div className="col-12 send-email-heading">
-                                <p>Vendos adresen e email-it për të tërhequr dhuratën t-shirt nga koleksioni i ri #Uncool prodhuar nga marka Zero Nero.</p>
+                                <p>{t('email')}</p>
                             </div>
                         </div>
                         <div className="row">
@@ -272,9 +281,7 @@ function App() {
                                 >
                                     {isSending ? (
                                         <span class="spinner-grow spinner-grow-sm" role="status" aria-hidden="true"></span>
-                                    ) : (
-                                        'Dërgo'
-                                    )}
+                                    ) : t('send')}
                                 </button>
                             </div>
                         </div>
@@ -286,7 +293,7 @@ function App() {
                     <div className="col-12">
                         <div className="row">
                             <div className="col-12 thankyou-heading">
-                                <p className="with-margin-large">faleminderit!</p>
+                                <p className="with-margin-large">{t('thanks')}</p>
                             </div>
                         </div>
                         
@@ -298,7 +305,7 @@ function App() {
                                     className="btn btn-primary play-again-btn w-100"
                                     onClick={playAgain}
                                 >
-                                    Luaj përsëri
+                                    {t('again')}
                                 </button>
                             </div>
                             <div className="col-2">&nbsp;</div>
@@ -310,4 +317,4 @@ function App() {
     );
 }
 
-export default App;
+export default Game;
